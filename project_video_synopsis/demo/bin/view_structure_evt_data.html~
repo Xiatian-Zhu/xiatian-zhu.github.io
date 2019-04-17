@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>View Event Structure</title>
+		<style>
+		.link {
+		  stroke: #ccc;
+		}
+
+		.node text {
+		  pointer-events: none;
+		  font: 10px Times-New-Roman;
+		}
+		
+		.title_sty {
+			text-align: center;
+			font-size: 35px;
+			font-weight: bold;
+			color: teal;
+		}
+
+		</style>
+        <!--script type="text/javascript" src="d3/d3.js"></script-->
+		<script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>
+    </head>
+    <body>
+        <script type="text/javascript">
+
+			var node_colours = ["BlueViolet", "BurlyWood", "Chartreuse", "Crimson", "IndianRed", 
+						"DarkGoldenRod", "DarkMagenta", "DarkOrange", "DeepPink", "DimGray",
+			                    	"IndianRed", "LawnGreen", "Lime", "MediumSeaGreen", "Olive",
+						"Peru", "RoyalBlue", "SaddleBrown", "Teal", "SeaGreen"];
+			
+			// ===================== To create graph =====================		
+			var w = screen.width / 1;
+			var h = 800;
+			
+			var svg = d3.select("body").append("svg")
+									   .attr("width", w)
+									   .attr("height", h);
+										 
+			// add links between data samples
+			var force = d3.layout.force()
+						.gravity(.05)
+						.distance(30)
+						.charge(-8)
+						.size([w, h]);
+						
+			d3.json("json/structure_Group_Study_data.json", function(error, json) {
+				force
+				.nodes(json.nodes)
+				.links(json.links)
+				.start();
+				
+				var link = svg.selectAll(".link")
+								.data(json.links)
+								.enter().append("line")
+								.attr("class", "link");
+				
+				var node = svg.selectAll("circle")
+								.data(json.nodes)
+								.enter().append("circle")
+								.attr("class", "circle_sty")
+								.attr("r", function(d) { return d.belief * 7; })
+								.attr("fill", function(d) {return node_colours[d.clust-1]})
+								.call(force.drag);
+				
+
+				force.on("tick", function() {
+					link.attr("x1", function(d) { return d.source.x; })
+					.attr("y1", function(d) { return d.source.y; })
+					.attr("x2", function(d) { return d.target.x; })
+					.attr("y2", function(d) { return d.target.y; });
+
+					node.attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
+				});
+			});	
+
+		var title = d3.select("body").append("div").attr("class", "title_sty");
+		title.append("text").text("The data structure of Group Study event. Colour: cluster membership; Size: inference confidence; Edge: similarity.");
+        </script>
+		
+    </body>
+</html>

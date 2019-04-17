@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<!-- saved from url=(0060)http://twitter.github.com/bootstrap/javascript.html#popovers -->
+<html lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <title>Scholarship Competition Structure</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Xiatian Zhu">
+        <meta name="author" content="Xiatian Zhu">
+        
+        <!--<meta name="keywords" content="Chen, Change, Loy, ccloy, ccloy225, C. C. Loy, CC Loy, Xiatian Zhu, Loy Chen Change, Abnormal Behaviour Detection, Anomaly Detection, Visual Surveillance, Multiple Cameras, Activity Analysis, Person Re-identification, Security, Random Forest, Active Learning, Mile End Junction Dataset, Underground, Camera Network, Crowded Scene Analysis, Crowd Analysis, Video Analysis, Unusual Event Detection, Crowd Counting, People Counting, Pressure-Sensitive Keystroke Dynamics Dataset, Biometrics, Typing Biometrics" />-->
+		<meta name="keywords" content="朱霞天, Xiatian Zhu, Xia Tian Zhu, X. Zhu, XT Zhu, XTZhu, Xiatian (Eddy) Zhu, Eddy, 
+			Visual Surveillance, Video Summarisation, Video Summarization, Video Synopsis,
+			Camera Network, Multi-Camera Correlation, Feature Coding,
+			Multi-Source, Multisource, Heterogeneous Sources, Source Correlation,
+			Random Forest, Clustering Random Forest, Constrained Clustering Random Forest,
+			Constrained Spectral Clustering, Pairwise Constraint Propogation, Noisy Constraints, Imperfect Oracles,
+			Constraint Propagation Random Forest, COP-RF" />
+        
+        <!-- Le styles -->
+        <link href="../../css/bootstrap.css" rel="stylesheet">
+        <link href="../../css/bootstrap-responsive.css" rel="stylesheet">
+        <link href="../../css/docs.css" rel="stylesheet">
+        <!--link href="../../prettify.css" rel="stylesheet"-->
+        <link href="../../css/cavan.css" rel="stylesheet">
+		<link href="./css/data_visualisation.css" rel="stylesheet">
+		<style>
+			.this_panel {
+				height:1200px;
+			}
+		</style>
+
+        <!-- Le fav and touch icons -->
+        <link rel="shortcut icon" type="image/ico" href="http://www.eecs.qmul.ac.uk/~xz303/images/icon/fav.png" /> 
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-57-precomposed.png">
+        
+        <link href="http://vjs.zencdn.net/c/video-js.css" rel="stylesheet">
+        <script src="http://vjs.zencdn.net/c/video.js"></script>
+
+        <script type="text/javascript">
+            
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-22940424-1']);
+            _gaq.push(['_trackPageview']);
+            
+            (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+            
+        </script>
+        
+        <script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>
+		
+		<script type="text/javascript" src="js/load_evt_structure.js"></script>
+        
+    </head>
+    
+    
+    
+<body data-spy="scroll" data-target="#navbar" data-twttr-rendered="true">
+        
+        <div id="navbar" class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!--<a class="brand" href="index.html#">C. C. LOY</a>-->
+                    <div class="nav-collapse">
+                        <ul class="nav">
+                            <li><a href="../../index.html"><strong>Home</strong></a></li>
+                            <!--<li><a href="../about.html"><strong>About Me</strong></a></li>-->
+                            <!--<li><a href="../publication.html"><strong>Publication</strong></a></li>-->
+							<li><a href="../../index.html#PUBLICATION"><strong>Publication</strong></a></li>
+                            <li><a href="../../download.html"><strong>Download</strong></a></li>
+                        </ul>
+                    </div><!--/.nav-collapse -->
+                </div>
+            </div>
+        </div>
+		
+    <div class="alert warning">Slow page loading speed is expected for the large graph. &nbsp; 
+		<span class="btn"><a href='./all_data_structure_CC-Forest.html'>Back</a></span> 
+	</div>
+
+
+	<p class="container">
+		
+	</p>
+
+	<script type="text/javascript">
+		var evt_name = 'Scholarship Competition';
+		var json_url = "json/structure_Scholarship_Competition_data.json";
+	
+		// ===================== To decompose space =====================
+		var whole_panel = d3.select("p");
+		// add graph title
+		var title_block = whole_panel.append("div").attr("class", "title");
+		var title_text = get_title_text(evt_name);
+		title_block.append("text").text(title_text);
+		
+		var legend_panel = whole_panel.append("div").attr("class", "panel legend_panel");
+		var graph_panel = whole_panel.append("div").attr("class", "panel graph_panel");
+		
+		// ===================== To create legend panel =====================
+		create_legend_panel(legend_panel, evt_name, json_url);
+
+		// ===================== To create graph =====================  
+		create_graph_panel(graph_panel, json_url);
+
+		
+    </script>
+
+
+        <div class="container">
+            <div class="tooltip-demo">
+                
+                <!-- Footer ================================================== -->
+                <footer class="footer">
+                    <div class="container">
+                        <p class="pull-right"><a href="#">Back to top</a></p>
+                        <p>Updated Mar 2014</p>
+			<p>This visualisation created using <a href="http://d3js.org/" target="_blank">D3.js</a></p>
+                        <p>Page created using <a href="http://getbootstrap.com/" target="_blank">bootstrap</a></p>
+                    </div>
+                </footer>
+                
+            </div> <!-- /tooltip-demo -->
+        </div> <!-- /container -->
+
+        <!-- Le javascript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster 
+        <script type="text/javascript" src="../../js/widgets.js"></script>
+        
+        <script src="../../js/prettify.js"></script>-->
+
+	<script src="../../js/jquery.js"></script>
+        <script src="../../js/bootstrap-transition.js"></script>
+        <script src="../../js/bootstrap-alert.js"></script>
+        <script src="../../js/bootstrap-modal.js"></script>
+        <!--<script src="./js/bootstrap-dropdown.js"></script>-->
+        <!--<script src="./js/bootstrap-scrollspy.js"></script>-->
+        <script src="../../js/bootstrap-tab.js"></script>
+        <script src="../../js/bootstrap-tooltip.js"></script>
+        <!--<script src="./js/bootstrap-popover.js"></script>-->
+        <script src="../../js/bootstrap-button.js"></script>
+        <script src="../../js/bootstrap-collapse.js"></script>
+        <!--<script src="./js/bootstrap-carousel.js"></script>-->
+        <!--<script src="./js/bootstrap-typeahead.js"></script>
+        <script src="../../js/bootstrap-affix.js"></script>
+        <script src="../../js/application.js"></script>-->
+        
+        
+        
+        
+        
+        
+</body>
+</html>
