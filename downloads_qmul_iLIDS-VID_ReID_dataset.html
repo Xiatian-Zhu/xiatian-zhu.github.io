@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Xiatian Zhu</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Xiatian Zhu">
+	<meta name="author" content="Xiatian Zhu">
+	
+	<meta name="keywords" content="Xiatian Zhu, X. Zhu" />
+
+	<!-- Le styles -->
+	<link href="./css/bootstrap.css" rel="stylesheet">
+	<link href="./css/bootstrap-responsive.css" rel="stylesheet">
+	<link href="./prettify.css" rel="stylesheet">
+	<link href="./css/docs.css" rel="stylesheet">
+	<link href="./css/aux.css" rel="stylesheet">
+
+	<!-- HTML5 shim, for IE6-8 support of HTML5 elements                 vd5dN32lqt            -->
+	<!--[if lt IE 9]>
+	  <script src="../assets/js/html5shiv.js"></script>
+	<![endif]-->
+
+	<!-- Fav and touch icons -->
+	<link rel="shortcut icon" href="./images/icon/fav.png">
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-144-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-114-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-72-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-57-precomposed.png">
+	
+</head>
+
+<body>
+
+	<!-- Navigation ================================================== -->
+	<div class="navbar navbar-inverse navbar-fixed-top content_width_range">
+		<div class="navbar-inner">
+			<div class="container" >
+				<button type="button" class="btn btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="brand" href="http://www.eecs.qmul.ac.uk/~xiatian/index.html">X. Zhu</a>
+				<div class="nav-collapse collapse">
+					<ul class="nav">
+						<li><a href="http://www.eecs.qmul.ac.uk/~xiatian/index.html"><strong>Home</strong></a></li>
+						<li><a href="http://www.eecs.qmul.ac.uk/~xiatian/publications.html"><strong>Publications</strong></a></li>
+						<li><a href="http://www.eecs.qmul.ac.uk/~xiatian/datasets.html"><strong>Datasets</strong></a></li>
+					</ul>
+				</div>
+			</div><!--/.container-->
+		</div>
+	</div>
+        
+        <div class="container">
+            <div class="tooltip-demo">
+                <section>
+                    <div class="page-header">
+                        <h2>iLIDS Video re-IDentification (iLIDS-VID) Dataset <small>(ECCV'14, TPAMI'16, PR'17, ECCV'18)</small>  &nbsp;
+                        <a href="./iLIDS-VID/iLIDS-VID.tar" class="btn btn-success" onclick="_gaq.push(['_trackEvent','Download','TAR',this.href]); CountFun();" target="_blank">
+				Download
+			</a> 
+			</h2>
+                    </div>
+                    
+                    <div class="row-fluid">
+                        <!--div class="span5">
+                            
+                        </div-->
+                        
+                        <p>
+                        	<div class="span7">
+                        
+				<a href="./iLIDS-VID/samples/person252.png" class="thumbnail" rel="tooltip" data-placement="top" title="Click for large image">
+					<img src="./iLIDS-VID/samples/person252.png" alt="iLIDS-VID">
+				</a> 
+				
+				</div>
+                        </p>
+                        
+                        <div class="span10">
+                        
+                        
+				<!--a href="./iLIDS-VID/samples/person258.png" class="thumbnail" rel="tooltip" data-placement="top" title="Click for large image">
+					<img src="./iLIDS-VID/samples/person258.png" alt="iLIDS-VID">
+				</a> <br/>
+
+				<a href="./iLIDS-VID/samples/person277.png" class="thumbnail" rel="tooltip" data-placement="top" title="Click for large image">
+					<img src="./iLIDS-VID/samples/person277.png" alt="iLIDS-VID">
+				</a> <br/>
+
+				<a href="./iLIDS-VID/samples/person297.png" class="thumbnail" rel="tooltip" data-placement="top" title="Click for large image">
+					<img src="./iLIDS-VID/samples/person297.png" alt="iLIDS-VID">
+				</a>
+					<div class="caption">
+					<h5> Examples of person image sequences. </h5>
+					</div-->
+                    	
+                            
+                            
+                <p>
+                            
+				<!--a href="./download_iLIDS-VID_tar.html" class="btn btn-success" onclick="_gaq.push(['_trackEvent','Download','TAR',this.href]); CountFun();" target="_blank">
+					<i class="icon-download-alt icon-white"></i> 
+					Download
+				</a--> 
+				&nbsp; &nbsp; &nbsp; 
+				<span id="showCount"></span>
+				
+				<script>
+			    var cnt=0;
+			    
+			    function CountFun(){
+					cnt=parseInt(cnt)+parseInt(1);
+			     	var spanData=document.getElementById("showCount");
+			     	spanData.innerHTML="Number of Downloads: ("+cnt +")"; 
+			     	alert(cnt);
+			    }
+				</script>
+				<br/>
+			<p> 
+			The iLIDS-VID dataset involves 300 different pedestrians observed across two disjoint camera views in public open space.
+			Two versions are contained: static images based (see the folder named "ILIDS-VID\images") and image sequences based (see the folder named "ILIDS-VID\sequences"). 				
+			</p>
+<!--p>The “ILIDS-VID\sequences” folder contains image sequences of 300 people. The “ILIDS-VID\images” folder contains image pairs of the 300 people. </p-->
+                            </p>
+                            
+                      	<h3>Details</h3>
+
+                    	<p>
+	                This dataset was created from the pedestrians observed in two non-overlapping camera views from 
+			<a href="https://www.gov.uk/imagery-library-for-intelligent-detection-systems">
+				the i-LIDS Multiple-Camera Tracking Scenario (MCTS) dataset
+			</a> which was captured at an airport arrival hall under a multi-camera CCTV network. 
+			It comprises 600 image sequences of 300 distinct individuals, with one pair of image sequences from two camera views for each person.
+			Each image sequence has variable length ranging from 23 to 192 image frames, with an average number of 73. 
+			The iLIDS-VID dataset is very challenging due to clothing similarities among people, lighting and viewpoint variations across camera views, 
+			cluttered background and random occlusions.
+			To facilitate the evaluation of single-shot based person re-identification methods on this dataset, 
+			we also provided a static images based version by randomly selecting one image from every person image sequence. 
+			<em>Benchmarked training/test people splits are provided for fair comparisons across different state-of-the-art methods in the literature.</em>
+			<!--consisting of image pairs for all the 300 people.-->
+			</p>					
+                            
+			<p> 
+			For downloading this data set, we have assumed that you have the right to access
+			the i-LIDS MCTS scenario.
+			The dataset is intended for research purposes only and as such cannot be used commercially. 
+			Please cite the following publication when this dataset is used in any academic and research reports.
+			</p>
+
+
+	<h3>Reference</h3>
+	<ol>
+		<li>
+			Unsupervised Person Re-Identification by Deep Learning Tracklet Association<br>
+			M. Li, X. Zhu and S. Gong<br>
+			In Proc. <em>European Conference on Computer Vision</em>, Munich, Germany, September 2018
+			<strong>(ECCV, Oral)</strong><br>
+			[ <a href='./papers/LiEtAl_ECCV2018.pdf'>PDF</a> ]
+		</li>
+			
+		<li>
+			Person Re-Identification by Unsupervised Video Matching<br>
+			X. Ma, X. Zhu, S. Gong, X. Xie, J. Hu, K.-M. Lam and Y. Zhong<br>
+			<em>Pattern Recognition</em>, Vol. 65, pp. 197-210, May 2017 
+			<b>(PR)</b><br>
+			[ <a href='./papers/PR16/MaEtAl_PR2017.pdf'>PDF</a> ]
+		</li>
+		
+		<li>
+			Person Re-Identification by Discriminative Selection in Video Ranking<br>
+			T. Wang, S. Gong, X. Zhu and S. Wang<br>
+			<em>IEEE Transactions on Pattern Analysis and Machine Intelligence</em>, 
+			Vol. 38, No. 12, pp. 2501-2514, December 2016 <b>(PAMI)</b><br>
+			[ <a href='./papers/TPAMI16/WangEtAl_PAMI2016.pdf'>PDF</a> ]
+			[ <a class="" href='./project_video_ranking/index.html'>Project Page</a> ]
+		</li>
+		
+		<li>
+			Person Re-Identification by Video Ranking<br>
+			T. Wang, S. Gong, X. Zhu and S. Wang<br>
+			In Proc. <em>European Conference on Computer Vision</em>, Zurich, Switzerland, September 2014
+			<b>(ECCV)</b><br>
+			[ <a href='./papers/ECCV14/WangEtAl_ECCV14.pdf'>PDF</a> ]
+			[ <a class="" href='./project_video_ranking/index.html'>Project Page</a> ]
+		</li>
+			
+				                              
+	</ol>
+
+	<br/>
+
+	<h3>State-Of-The-Art Results</h3>
+	
+	<table class="table table-condensed">
+		<thead>
+			<th>Method / Rank</th><th>1</th><th>5</th><th>10</th><th>20</th>
+		</thead>
+
+		<tbody>
+
+		<tr>
+			<td style='width: 600px'>
+				[1] <a href='./papers/ECCV14/WangEtAl_ECCV14.pdf'>
+					Person Re-Identification by Discriminative Selection in Video Ranking.</a>
+				T. Wang, S. Gong, X. Zhu, S. Wang <strong>(TPAMI, 2016)</strong>
+			</td>
+			<td>39.5</td> <td>61.1</td> <td>71.7</td> <td>81.0</td>			
+		</tr>
+
+		<tr>
+			<td style='width: 600px'>
+				[2] <a href='http://www.cv-foundation.org/openaccess/content_cvpr_2016/html/You_Top-Push_Video-Based_Person_CVPR_2016_paper.html'>
+					Top-push Video-based Person Re-identification.</a>
+				J. You, A. Wu, X. Li, W-S Zheng <strong>(CVPR, 2016)</strong>
+			</td>
+			<td>56.3</td> <td>87.6</td> <td>95.6</td> <td>98.3</td>   
+		</tr>
+
+		<tr>
+			<td style='width: 600px'>
+				[3] <a href='http://www.cv-foundation.org/openaccess/content_cvpr_2016/html/McLaughlin_Recurrent_Convolutional_Network_CVPR_2016_paper.html'>
+					Recurrent Convolutional Network for Video-Based Person Re-Identification.</a>
+				N. McLaughlin, J. M. Rincon, P. Miller <strong>(CVPR, 2016)</strong>
+			</td>
+			<td>58.0</td> <td>84.0</td> <td>91.0</td> <td>96.0</td>      
+		</tr>
+
+		<td style='width: 600px'>
+				[4] <a href='http://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Liu_A_Spatio-Temporal_Appearance_ICCV_2015_paper.pdf'>
+					A Spatio-Temporal Appearance Representation for Viceo-Based Pedestrian Re-Identification.</a> 
+					K. Liu, B. Ma, W. Zhang, R. Huang <strong>(ICCV, 2015)</strong>
+			</td>
+			<td>44.3</td> <td>71.7</td> <td>83.7</td> <td>91.7</td>     
+			
+		</tbody>
+
+		<td style='width: 600px'>
+				[5] <a href='http://arxiv.org/pdf/1606.01609.pdf'>
+					Deep Recurrent Convolutional Networks for Video-based Person Re-identification: An End-to-End Approach.</a> 
+					L. Wu, C. Shen, A. Hengel <strong>(arXiv, 2016)</strong>
+			</td>
+			<td>46.1</td> <td>76.8</td> <td>89.7</td> <td>95.6</td>       
+			
+		</tbody>
+
+		<td style='width: 600px'>
+				[6] <a href='http://www.liangzheng.com.cn/1320.pdf'>
+					MARS: A Video Benchmark for Large-Scale Person Re-identification.</a> 
+					L. Zheng, Z. Bie, Y. Sun, J. Wang, C. Su, S. Wang, Q. Tian <strong>(ECCV, 2016)</strong>
+			</td>
+			<td> 53.0</td> <td>81.4</td> <td>--</td> <td>95.1</td>         
+			
+		</tbody>
+
+		<td style='width: 600px'>
+				[7] <a href='http://www.ijcai.org/Proceedings/16/Papers/501.pdf'>
+					Video-Based Person Re-Identification by Simultaneously Learning Intra-Video and Inter-Video Distance Metrics.</a> 
+					X. Zhu, X-Y Jing, F. Wu, H. Feng <strong>(IJCAI, 2016)</strong>
+			</td>
+			<td>48.7</td> <td>81.1</td> <td>89.2</td> <td>97.3</td>            
+			
+		</tbody>
+
+		<td style='width: 600px'>
+				[8] <a href='http://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Cho_Improving_Person_Re-Identification_CVPR_2016_paper.pdf'>
+					Improving Person Re-identification via Pose-aware Multi-shot Matching.</a> 
+					Y-J Cho, K-J Yoon <strong>(CVPR, 2016)</strong>
+			</td>
+			<td>30.3</td> <td>56.3</td> <td>70.3</td> <td>82.7</td>            
+			
+		</tbody>
+		
+		  
+		<td style='width: 600px'>
+				[9] <a href='https://www.ecse.rpi.edu/~rjradke/papers/li-bmvc15.pdf'>
+					Multi-Shot Human Re-Identification Using Adaptive Fisher Discriminant Analysis.</a> 
+					Y. Li, Z. Wu, S. Karanam, R. J. Radke <strong>(BMVC, 2015)</strong>
+			</td>
+			<td>37.5</td> <td>62.7</td> <td>73.0</td> <td>81.8</td>            
+			   
+		</tbody>
+
+		<td style='width: 600px'>
+				[10] <a href='https://arxiv.org/abs/1607.05975'>
+					Person Re-identification for Real-world Surveillance Systems.</a> 
+					Furqan M. Khan and Francois Bremond <strong>(arXiv, 2016)</strong>
+			</td>
+			<td>39.9</td> <td>65.5</td> <td>77.0</td> <td>84.2</td>
+			   
+		</tbody>
+			
+		<td style='width: 600px'>
+				[11] <a href='https://ecse.rpi.edu/homepages/rjradke/papers/karanam-iccv15.pdf'>
+					Person Re-Identification with Discriminatively Trained Viewpoint Invariant Dictionaries.</a> 
+					S. Karanam, Y. Li, R. J. Radke <strong>(ICCV, 2015)</strong>
+			</td>
+			<td>25.9</td> <td>48.2</td> <td>57.3</td> <td>68.9</td>
+			   
+		</tbody>	
+			 
+		<td style='width: 600px'>
+				[12] <a href='https://www.google.co.uk/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0ahUKEwiM7ZuOj4DPAhWIChoKHbimBpYQFggcMAA&url=http%3A%2F%2Fieeexplore.ieee.org%2Fiel7%2F7527113%2F7532277%2F07533168.pdf%3Farnumber%3D7533168&usg=AFQjCNE9GHSmbg3xT1adtmbI671zYaR0mg&sig2=z6V8WJP8izCK33ZG-h7onw'>
+					Temporally Aligned Pooling Representation for Video-Based Person Re-Identification.</a> 
+					C. Gao, J. Wang, L. Liu, J-G Yu, N. Sang <strong>(ICIP, 2016)</strong>
+			</td>
+			<td>55.0</td> <td>87.5</td> <td>93.8</td> <td>97.2</td>
+			   
+		</tbody>
+		
+		<td style='width: 600px'>
+				[13] <a href='https://arxiv.org/pdf/1605.09653v3.pdf'>
+					A Systematic Evaluation and Benchmark for Person Re-Identification: Features, Metrics, and Datasets.</a> 
+					Srikrishna Karanam, Mengran Gou, Ziyan Wu, Angels Rates-Borras, Octavia Camps, Richard J. Radke <strong>(arXiv, 2016)</strong>
+			</td>
+			<td>75.7</td> <td>90.1</td> <td>93.6</td> <td>96.5</td>
+			   
+		</tbody>
+		
+		<td style='width: 600px'>
+				[14] <a href='http://ieeexplore.ieee.org/document/7954700/'>
+					Learning Bidirectional Temporal Cues for Video-based Person Re-Identification.</a> 
+					W. Zhang, X. Yu, X. He <strong>(IEEE TCSVT, 2017)</strong>
+			</td>
+			<td>55.3</td> <td>85.0</td> <td>91.7</td> <td>95.1</td>
+		</tbody>
+		
+		<td style='width: 600px'>
+				[15] <a href='http://openaccess.thecvf.com/content_cvpr_2017/papers/Zhou_See_the_Forest_CVPR_2017_paper.pdf'>
+					See the Forest for the Trees: Joint Spatial and Temporal Recurrent Neural Networks for Video-based Person Re-identification.</a> 
+					Z. Zhou, Y. Huang, W. Wang, Liang Wang, T. Tan <strong>(CVPR, 2017)</strong>
+			</td>
+			<td>55.2</td> <td>86.5</td> <td>-</td> <td>97.0</td>
+			   
+		</tbody>
+		
+		
+		
+		<td style='width: 600px'>
+				[16] <a href='https://arxiv.org/pdf/1708.02286.pdf'>
+					Jointly Attentive Spatial-Temporal Pooling Networks for Video-based Person Re-Identification.</a> 
+					S. Xu, Y. Cheng, K. Gu, Y. Yang, S. Chang, P. Zhou <strong>(ICCV, 2017)</strong>
+			</td>
+			<td>62</td> <td>86</td> <td>94</td> <td>98</td>
+		</tbody>
+		
+		<td style='width: 600px'>
+				[17] <a href='http://www-sop.inria.fr/members/Francois.Bremond/Postscript/furqanWACV17.pdf'>
+					Multi-shot Person Re-identification using Part Appearance Mixture.</a> 
+					Furqan M. Khan and Francois Bremond <strong>(WACV, 2017)</strong>
+			</td>
+			<td><strong>79.5</strong></td> <td><strong>95.1</strong></td> <td><strong>97.6</strong></td> <td><strong>99.1</strong></td>
+		</tbody>
+		
+		
+							     
+
+	</table>
+	
+	
+
+
+
+
+	</div>
+    </div>
+    
+    
+</section>
+                
+                
+<!-- Footer ================================================== -->
+<footer class="footer">
+    <div class="container">
+	<p class="pull-right span2">
+		<script type="text/javascript" id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?d=wpoEbZSAVtL2ZeLVX5X3kqGCh7MywXCHcZmxD1T252A&cl=ffffff&w=a"></script>                   
+	</p>
+	<p>Created by <a href="http://getbootstrap.com/" target="_blank">bootstrap</a></p>
+    </div>
+</footer>
+                
+                
+</div> <!-- /tooltip-demo -->
+</div> <!-- /container -->
+
+
+<!-- Le javascript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./js/jquery.js"></script>
+<script src="./js/bootstrap.js"></script>  
+        
+</body>
+</html>

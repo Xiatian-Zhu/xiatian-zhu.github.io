@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Xiatian Zhu</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Xiatian Zhu">
+	<meta name="author" content="Xiatian Zhu">
+	
+	<meta name="keywords" content="Xiatian Zhu, X. Zhu" />
+
+	<!-- Le styles -->
+	<link href="./css/bootstrap.css" rel="stylesheet">
+	<link href="./css/bootstrap-responsive.css" rel="stylesheet">
+	<link href="./prettify.css" rel="stylesheet">
+	<link href="./css/docs.css" rel="stylesheet">
+	<link href="./css/aux.css" rel="stylesheet">
+
+	<!-- HTML5 shim, for IE6-8 support of HTML5 elements                 vd5dN32lqt            -->
+	<!--[if lt IE 9]>
+	  <script src="../assets/js/html5shiv.js"></script>
+	<![endif]-->
+
+	<!-- Fav and touch icons -->
+	<link rel="shortcut icon" href="./images/icon/fav.png">
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-144-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-114-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-72-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-57-precomposed.png">
+	
+</head>
+
+<body>
+
+	<!-- Navigation ================================================== -->
+	<div class="navbar navbar-inverse navbar-fixed-top content_width_range">
+		<div class="navbar-inner">
+			<div class="container" >
+				<button type="button" class="btn btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="brand" href="http://www.eecs.qmul.ac.uk/~xiatian/index.html">X. Zhu</a>
+				<div class="nav-collapse collapse">
+					<ul class="nav">
+						<li><a href="http://www.eecs.qmul.ac.uk/~xiatian/index.html"><strong>Home</strong></a></li>
+						<li><a href="http://www.eecs.qmul.ac.uk/~xiatian/publications.html"><strong>Publications</strong></a></li>
+						<li><a href="http://www.eecs.qmul.ac.uk/~xiatian/datasets.html"><strong>Datasets</strong></a></li>
+					</ul>
+				</div>
+			</div><!--/.container-->
+		</div>
+	</div>
+        
+        <div class="container">
+            <div class="tooltip-demo">
+                
+                
+                <!--<ul class="breadcrumb">
+                <li><a href="index.html#home">Home</a> <span class="divider">/</span></li>
+                <li><a href="index.html#thumbnails">Download</a> <span class="divider">/</span></li>
+                <li class="active">QMUL Junction Dataset</li>
+            </ul>-->
+            
+            
+                <!-- Home ================================================== -->
+                <section>
+                    <div class="page-header">
+                        <h1>TIme Square Intersection (TISI) Dataset <small>(ICCV'13, IJCV'16)</small> </h1>
+                    </div>
+                    
+                    <div class="row-fluid">
+                        <div class="span5">
+                            <p>
+                                <div class="thumbnail">
+									<a href="./images/datasets/TISI.png" class="thumbnail" rel="tooltip" data-placement="top" title="Click for large image">
+										<img src="./images/datasets/TISI.png" alt="">
+									</a>
+                                    <div class="caption">
+										<p>Example frames.</p>
+									</div>
+                                </div>
+                            </p>
+                        </div>
+                        
+                        <div class="span7">
+
+                            <p>
+                                <a href="http://pan.baidu.com/share/link?shareid=623792411&uk=2940134214&third=15" class="btn btn-success" target="_blank">
+								Download
+								</a><br />
+                                <em>Including image sequences in jpeg format, non-visual weather and traffic speed data.</em>
+								To facilitate downloading this huge video dataset, you may want to download and install the Baidu cloud bulter.
+								<br/>
+								<!-- Due to the huge size of this dataset, please contact us for arranging a downloading way. -->
+                            </p>
+                            
+                            <h3>Details</h3>
+                            <p>
+                                The TIme Square Intersection (TISI) dataset was collected from a publicly accessible webcam for high-level event based video synopsis research. 
+								This dataset can be exploited for other computer vision problems, such as video classification or tag annotation.
+								<br /><br />
+                                
+								Image sequences (jpeg format): organised in multiple folders named with the record time (GMT time zone). In each folder 1000 frames are contained.
+								(Note that there is a gap of 5 hours between the New York's time (UTC-05:00) and GMT time)
+								<br /><br />
+								
+								Weather data (xml format): the weather condition description of the Time Square drawn from the <a href="http://www.worldweatheronline.com/">WorldWeatherOnline</a> website, including temperature, weather type, wind speed, wind direction, precipitation, humidity, visibility, pressure, and cloud cover et al.
+								The weather data files named `weather_matched.xml' are distributed in individual folders.
+								<br /><br />
+								
+								Traffic speed data (jpeg format): the traffic condition description of the Time Square drawn from the <a href="https://maps.google.co.uk/maps?q=W+47th+St,+New+York,+10036,+United+States&hl=en&ll=40.759155,-73.984497&spn=0.001512,0.003074&safe=strict&geocode=FavvbQIdghWX-w&hnear=W+47th+St,+New+York,+10036,+United+States&t=m&layer=t&z=19">Google Maps</a>. 
+								Totally four levels of traffic speed are involved: very slow, slow, moderate, and fast. 
+								The traffic speed data files named `traffic_condition.jpg' are distributed in individual folders.
+								<br /><br />
+                                
+                                Stream length: a total of 2501 folders, each containing 1000 image frames<br />
+                                Frame size: 550x960 <br />
+                                Frame rate: ~10 Hz <br />
+                            </p>
+                            
+                            <p> The dataset is intended for research purposes only and as such cannot be used commercially. Please cite the following publication when this dataset is used in any academic and research reports.
+                            </p>
+
+                            
+        <h3>References</h3>
+        <ol>
+        <li>
+			Learning from Multiple Sources for Video Summarisation<br>
+			X. Zhu, C.C. Loy and S. Gong<br>
+			<em>International Journal of Computer Vision</em>, Vol. 117, No. 3, pp. 247-268, May 2016 
+			<b>(IJCV)</b><br> 
+			[ <a href='./papers/IJCV15/ZhuLoyGong_IJCV2015.pdf'>PDF</a> ]
+			[ <a class="" href='./project_video_synopsis/index.html'>Project Page</a> ]
+		</li>
+		
+		<li>
+			Video Synopsis by Heterogeneous Multi-Source Correlation<br>
+			X. Zhu, C.C. Loy and S. Gong<br>
+			In Proc. <em>IEEE International Conference on Computer Vision</em>, Sydney, Australia, December 2013 
+			<b>(ICCV)</b> <br>					
+			[ <a href='./papers/ICCV13/ZhuLoyGong_ICCV2013.pdf'>PDF</a> ]
+			[ <a class="" href='./papers/ICCV13/Poster_ICCV_2013.pdf'>Poster</a> ]
+			[ <a class="" href='./project_video_synopsis/index.html'>Project Page</a> ]
+		</li>
+                                
+        </ol>
+        </div>
+        </div>
+                    
+                    
+                </section>
+                
+                
+                <!-- Footer ================================================== -->
+                <footer class="footer">
+                    <div class="container">
+                        <p class="pull-right"><a href="#">Back to top</a></p>
+                        <p>Created by <a href="http://getbootstrap.com/" target="_blank">bootstrap</a></p>
+                    </div>
+                </footer>
+                
+                
+            </div> <!-- /tooltip-demo -->
+        </div> <!-- /container -->
+
+        <!-- Le javascript
+    ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="./js/jquery.js"></script>
+        <script src="./js/bootstrap.js"></script>  
+        
+</body></html>
