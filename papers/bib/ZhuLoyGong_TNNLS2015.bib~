@@ -1,0 +1,8 @@
+@INPROCEEDINGS{zhu2013constrained,
+  author = {Zhu, Xiatian and Loy, Chen Change and Gong, Shaogang},
+  title = {Constrained Clustering: Effective Constraint Propagation with Imperfect
+	Oracles},
+  booktitle = {The IEEE International Conference on Data Mining},
+  year = {2013},
+  organization = {IEEE}
+}
