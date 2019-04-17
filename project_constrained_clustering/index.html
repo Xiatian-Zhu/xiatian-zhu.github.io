@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<!-- saved from url=(0060)http://twitter.github.com/bootstrap/javascript.html#popovers -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <title>Constrained Clustering: Effective Constraint Propagation with Imperfect Oracles</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Xiatian Zhu">
+        <meta name="author" content="Xiatian Zhu">
+        
+		<meta name="keywords" content="朱霞天, Xiatian Zhu, 
+			Visual Surveillance, Video Summarisation, Video Summarization, Video Synopsis,
+			Camera Network, Multi-Camera Correlation, Feature Coding,
+			Multi-Source, Multisource, Heterogeneous Sources, Source Correlation,
+			Random Forest, Clustering Random Forest, Constrained Clustering Random Forest,
+			Constrained Spectral Clustering, Pairwise Constraint Propogation, Noisy Constraints, Imperfect Oracles,
+			Constraint Propagation Random Forest, COP-RF" />
+        
+        <!-- Le styles -->
+        <link href="../css/bootstrap.css" rel="stylesheet">
+        <link href="../css/bootstrap-responsive.css" rel="stylesheet">
+        <link href="../css/docs.css" rel="stylesheet">
+        <link href="../prettify.css" rel="stylesheet">
+        <link href="../css/cavan.css" rel="stylesheet">
+		<link href="../css/Eddy.css" rel="stylesheet">
+        
+        <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+        <!-- Le fav and touch icons -->
+        <link rel="shortcut icon" type="image/ico" href="http://www.eecs.qmul.ac.uk/~xz303/images/icon/fav.png" /> 
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-57-precomposed.png">
+        
+        <link href="http://vjs.zencdn.net/c/video-js.css" rel="stylesheet">
+        <script src="http://vjs.zencdn.net/c/video.js"></script>
+        
+    </head>
+    
+    
+    
+    <body data-spy="scroll" data-target="#navbar" data-twttr-rendered="true">
+        
+        <div id="navbar" class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <div class="nav-collapse">
+                        <ul class="nav">
+                            <li><a href="../index.html"><strong>Home</strong></a></li>
+							<li><a href="../index.html#PUBLICATION"><strong>Publication</strong></a></li>
+                            <li><a href="../download.html"><strong>Download</strong></a></li>
+                        </ul>
+                    </div><!--/.nav-collapse -->
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        
+        <div class="container">
+            <div class="tooltip-demo">
+                
+                <section id="overview_diagram">
+                    <div class="page-header">
+                        <h1>Constrained Clustering: Effective Constraint Propagation with Imperfect Oracles <small>ICDM'13, TNNLS'15</small></h1>
+                    </div>
+                    
+                    <!-- <div class="row-fluid">
+            <div class="thumbnail">
+                <img src="./images/overview.png" alt="">
+            </div>
+          </div> -->
+                </section>
+                
+                <!-- Content
+        ================================================== -->
+                <section>
+                    
+                    <h2>Introduction <small></small></h2>
+                    <p>
+                        While spectral clustering is usually an unsupervised operation, there are circumstances in which we have prior belief that pairs of samples should (or should not) be assigned with the same cluster. Constrained spectral clustering aims to exploit this prior belief as constraint (or weak supervision) to influence the cluster formation so as to obtain a structure more closely resembling human perception. Two important issues remain open: (1) how to propagate sparse constraints effectively, (2) how to handle ill-conditioned/noisy constraints generated by imperfect oracles. In this paper we present a unified framework to address the above issues. Specifically, in contrast to existing constrained spectral clustering approaches that blindly rely on all features for constructing the spectral, our approach searches for neighbours driven by discriminative feature selection for more effective constraint diffusion. Crucially, we formulate a novel data-driven filtering approach to handle the noisy constraint problem, which has been unrealistically ignored in constrained spectral clustering literature.
+                    </p>
+                    
+                </section>
+                
+                <section>
+                    <h2>Contribution Highlights <small></small></h2>
+                    <ul>
+                        <li>We formulate a novel discriminative-feature driven approach for effective sparse constraint propagation. Existing methods fundamentally ignore the role of feature selection in this problem.</li>
+                        <li>We propose a data-driven method to filter potentially noisy constraints, a problem that is largely unaddressed by existing constrained clustering algorithms.</li>
+                    </ul>
+                    
+                </section>
+                
+                <section>
+                    <h2>Citation <small></small></h2>
+                    <ol>
+			<li>
+				<span class="title">Constrained Clustering with Imperfect Oracles</span> 
+				<br />
+				<span class="details">
+					X. Zhu, C. C. Loy, S. Gong<br />
+					<!--Special Issue on Learning in Non-(geo)metric Spaces,--> 
+					IEEE Transactions on Neural Networks and Learning Systems, 2015 <b>(TNNLS)</b><br /> 
+				</span>
+				<!--<a href="../files/icdm_2013.pdf"><span class="label_download">PDF</span></a>-->
+				[<a href='../papers/TNNLS15/ZhuLoyGong_TNNLS2015.pdf'>PDF</a>] &nbsp;
+				<!-- [<a href='../papers/bib/ZhuLoyGong_TNNLS2015.bib'>Bib</a>] &nbsp; -->
+			</li>
+                        <li>
+				<span class="title">Constrained Clustering: Effective Constraint Propagation with Imperfect Oracles</span> 
+				<br />
+				<span class="details">
+					X. Zhu, C. C. Loy, S. Gong<br />
+					in Proceedings of IEEE International Conference on Data Mining, 2013 <strong>(ICDM)</strong><br /> 
+				</span>
+				<!--<a href="../files/icdm_2013.pdf"><span class="label_download">PDF</span></a>-->
+				[<a href='../papers/ICDM2013/ZhuLoyGong_ICDM2013.pdf'>PDF</a>] &nbsp;
+				<!-- [<a href='../papers/bib/ZhuLoyGong_ICDM2013.bib'>Bib</a>] &nbsp; -->
+			</li>
+                    </ol>
+                </section>
+                
+                <section>
+                    <h2>Images <small></small></h2>
+                    <!-- Put other representative images here -->
+                    <!-- Again, please put the images in to ./images -->
+                    <div class="row-fluid">
+                        <div class="span4">
+                            <a href="./images/fig1.png" class="thumbnail" rel="tooltip" data-placement="top" title="Click for large image">
+                                <img src="./images/fig1.png"   alt="">
+                            </a>
+                        </div>
+                        <div class="span8">
+                            <strong>Overview:</strong>
+                            <p>Our model, COP-RF, is capable of discovering data partitions close to the ground truth clusters despite it is provided only with sparse and noisy constraints. (a) Ground truth cluster formation, with invalid pairwise constraints highlighted in red colour; must- and cannot-links are represented by solid and dashed lines respectively; (b) the clustering result obtained using unsupervised clustering; (c) the result obtained using our method.</p>
+                        </div>
+                    </div>
+                    
+                    <p></p> <!-- this is to separate different rows of figures -->
+			
+                    <div class="row-fluid">
+                        <div class="span4">
+                            <a href="./images/fig2.png" class="thumbnail" rel="tooltip" data-placement="top" title="Click for large image">
+                                <img src="./images/fig2.png"   alt="">
+                            </a>
+                        </div>
+                        <div class="span8">
+                            <strong>Overview of our approach: </strong>
+                            <p>
+                               We propose a model that can flexibly generate a constraint-aware affinity matrix, which is directly employed by existing spectral clustering methods as input for constrained clustering.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <p></p> <!-- this is to separate different rows of figures -->
+			
+                    <div class="row-fluid">
+                        <div class="span4">
+                            <a href="./images/fig3.png" class="thumbnail" rel="tooltip" data-placement="top" title="Click for large image">
+                                <img src="./images/fig3.png"   alt="">
+                            </a>
+                        </div>
+                        <div class="span8">
+                            <strong>Dataset:</strong>
+                            <p> Example frames from the ERCe dataset. It contain six event classes including (a) Student Orientation, (b) Cleaning, (c) Career Fair, (d) Group Study, (e) Gun Forum, and (f) Scholarship Competition.</p>
+                        </div>
+                    </div>
+                    
+                    <p></p> <!-- this is to separate different rows of figures -->
+			
+                    <div class="row-fluid">
+                        <div class="span4">
+                            <a href="./images/fig4.png" class="thumbnail" rel="tooltip" data-placement="top" title="Click for large image">
+                                <img src="./images/fig4.png"   alt="">
+                            </a>
+                        </div>
+                        <div class="span8">
+                            <strong>Comparison using Adjusted Rand Index (ARI):</strong>
+                            <p>Comparison of clustering performance between different methods given a varying number of perfect pairwise constraints.</p>
+                        </div>
+                    </div>
+                    
+                </section>
+                
+                <section>			
+                    <h2>Datasets <small></small></h2>
+                    
+                    <ul>
+                        <li>
+							<a href="http://www.eecs.qmul.ac.uk/~xz303/downloads_qmul_ERCe_dataset.html">ERCe dataset</a>
+                        </li>
+                    </ul>
+                </section>
+                
+                
+                
+                <!-- Footer ================================================== -->
+                <footer class="footer">
+                    <div class="container">
+                        <p class="pull-right">Page created using <a href="http://getbootstrap.com/" target="_blank">bootstrap</a></p>
+                    </div>
+                </footer>
+                
+            </div> <!-- /tooltip-demo -->
+        </div> <!-- /container -->
+
+
+        
+        <!-- Le javascript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/javascript" src="../js/widgets.js"></script>
+        <script src="../js/jquery.js"></script>
+        <script src="../js/prettify.js"></script>
+        <script src="../js/bootstrap-transition.js"></script>
+        <script src="../js/bootstrap-alert.js"></script>
+        <script src="../js/bootstrap-modal.js"></script>
+        <!--<script src="./js/bootstrap-dropdown.js"></script>-->
+        <!--<script src="./js/bootstrap-scrollspy.js"></script>-->
+        <script src="../js/bootstrap-tab.js"></script>
+        <script src="../js/bootstrap-tooltip.js"></script>
+        <!--<script src="./js/bootstrap-popover.js"></script>-->
+        <script src="../js/bootstrap-button.js"></script>
+        <script src="../js/bootstrap-collapse.js"></script>
+        <!--<script src="./js/bootstrap-carousel.js"></script>-->
+        <!--<script src="./js/bootstrap-typeahead.js"></script>-->
+        <script src="../js/bootstrap-affix.js"></script>
+        <script src="../js/application.js"></script>
+        
+        
+        
+        
+        
+        
+</body></html>

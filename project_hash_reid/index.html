@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<!-- saved from url=(0060)http://twitter.github.com/bootstrap/javascript.html#popovers -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <title>Constrained Clustering: Effective Constraint Propagation with Imperfect Oracles</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Xiatian Zhu">
+        <meta name="author" content="Xiatian Zhu">
+        
+		<meta name="keywords" content="Hashing, Fast Search, Person Re-Indetification" />
+        
+        <!-- Le styles -->
+        <link href="../css/bootstrap.css" rel="stylesheet">
+        <link href="../css/bootstrap-responsive.css" rel="stylesheet">
+        <link href="../css/docs.css" rel="stylesheet">
+        <link href="../prettify.css" rel="stylesheet">
+        <link href="../css/cavan.css" rel="stylesheet">
+	<link href="../css/Eddy.css" rel="stylesheet">
+        
+        <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+        <!-- Le fav and touch icons -->
+        <link rel="shortcut icon" type="image/ico" href="http://www.eecs.qmul.ac.uk/~xz303/images/icon/fav.png" /> 
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-57-precomposed.png">
+        
+        <link href="http://vjs.zencdn.net/c/video-js.css" rel="stylesheet">
+        <script src="http://vjs.zencdn.net/c/video.js"></script>
+        
+    </head>
+    
+    
+    
+    <body data-spy="scroll" data-target="#navbar" data-twttr-rendered="true">
+        
+        <div id="navbar" class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <div class="nav-collapse">
+                        <ul class="nav">
+                            <li><a href="../index.html"><strong>Home</strong></a></li>
+			    <li><a href="../publication.html"><strong>Publication</strong></a></li>
+                            <li><a href="../download.html"><strong>Download</strong></a></li>
+                        </ul>
+                    </div><!--/.nav-collapse -->
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        
+        <div class="container">
+            <div class="tooltip-demo">
+                
+                <section id="overview_diagram">
+                    <div class="page-header">
+                        <h1>Fast Open-World Person Re-Identification<small> TIP'18</small></h1>
+                    </div>
+                    
+                </section>
+                
+                <!-- Content ================================================== -->
+                <section>
+                    
+                    <h2>Introduction <small></small></h2>
+                    <p>
+                        Existing person re-identification (re-id) methods
+			typically assume that (1) any probe person is guaranteed to
+			appear in the gallery target population during deployment (i.e.
+			closed-world), and (2) the probe set contains only a limited
+			number of people (i.e. small search scale). Both assumptions
+			are artificial and breached in real-world applications, since the
+			probe population in target people search can be extremely vast
+			in practice due to the ambiguity of probe search space boundary.
+			Therefore, it is unrealistic that any probe person is assumed as
+			one target people, and a large-scale search in person images is
+			inherently demanded. In this work, we introduce a new person
+			re-id search setting, called Large Scale Open-World (LSOW) reid,
+			characterised by huge size probe images and open person
+			population in search thus more close to practical deployments.
+			Under LSOW, the under-studied problem of person re-id efficiency 
+			is essential in addition to that of commonly-studied re-id
+			accuracy. We therefore develop a novel fast person re-id method,
+			called Cross-view Identity Correlation and vErification (X-ICE)
+			hashing, for joint learning of cross-view identity representation
+			binarisation and discrimination in a unified manner. Extensive
+			comparative experiments on three large scale benchmarks have
+			been conducted to validate the superiority and advantages of the
+			proposed X-ICE method over a wide range of the state-of-the-art
+			hashing models, person re-id methods, and their combinations.
+		</p>
+                    
+                </section>
+                
+                <section>
+                    <h2>Contribution Highlights</h2>
+                    <ul>
+                        <li>
+                        	We propose
+				a more realistic Large Scale Open-World (LSOW) person reid
+				problem. The LSOW eliminates two artificial assumptions
+				made by existing re-id models that fundamentally prevent them
+				from being scalable and applicable to real-world deployments
+                        </li>
+                        
+                        <li>
+                        	We develop a new person re-id method, called Cross-view
+				Identity Correlation and vErification (X-ICE), for efficiently
+				and effectively addressing LSOW re-id matching. In particular,
+				X-ICE learns a re-id discriminative binary coding space by simultaneous
+				cross-view identity correlation hashing and person
+				class discrimination verification.
+                        </li>
+                        
+                        <li>
+                        	We extensively evaluate a
+			wide range (14) of state-of-the-art hashing methods for LSOW
+			person re-id. To our knowledge, this is the first attempt to
+			investigate fast search solutions for large scale re-id in open
+			world. 
+                        </li>
+                        
+                    </ul>
+                    
+                </section>
+                
+                <section>
+                    <h2>Citation <small></small></h2>
+                    <ol>
+			<li>
+				<a class="title" href='../papers/ZhuEtAl_TIP2017.pdf'>Fast Open-World Person Re-Identification</a> 
+				<br />
+				<span class="details">
+					X. Zhu, B. Wu, D. Huang and W-S Zheng.<br />
+					IEEE Transactions on Image Processing, Vol. 27, No. 5, pp. 2286-2300, May 2018 <b>(TIP)</b><br /> 
+				</span>
+			</li>
+                    </ol>
+                </section>
+                
+                
+                
+                <section>			
+                    <h2>Codes <small></small></h2>
+                    <p>
+			<a href="./XICE.zip" class="btn btn-success"><i class="icon-download-alt icon-white"></i> Download Codes [293 KB]</a>
+		    </p>
+                    <ul>
+                
+                </section>
+                
+                
+                
+                <!-- Footer ================================================== -->
+                <footer class="footer">
+                    <div class="container">
+                        <p class="pull-right">Page created using <a href="http://getbootstrap.com/" target="_blank">bootstrap</a></p>
+                    </div>
+                </footer>
+                
+            </div> <!-- /tooltip-demo -->
+        </div> <!-- /container -->
+
+
+        
+        <!-- Le javascript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/javascript" src="../js/widgets.js"></script>
+        <script src="../js/jquery.js"></script>
+        <script src="../js/prettify.js"></script>
+        <script src="../js/bootstrap-transition.js"></script>
+        <script src="../js/bootstrap-alert.js"></script>
+        <script src="../js/bootstrap-modal.js"></script>
+        <!--<script src="./js/bootstrap-dropdown.js"></script>-->
+        <!--<script src="./js/bootstrap-scrollspy.js"></script>-->
+        <script src="../js/bootstrap-tab.js"></script>
+        <script src="../js/bootstrap-tooltip.js"></script>
+        <!--<script src="./js/bootstrap-popover.js"></script>-->
+        <script src="../js/bootstrap-button.js"></script>
+        <script src="../js/bootstrap-collapse.js"></script>
+        <!--<script src="./js/bootstrap-carousel.js"></script>-->
+        <!--<script src="./js/bootstrap-typeahead.js"></script>-->
+        <script src="../js/bootstrap-affix.js"></script>
+        <script src="../js/application.js"></script>
+        
+        
+        
+        
+        
+        
+</body></html>

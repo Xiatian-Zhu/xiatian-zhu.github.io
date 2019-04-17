@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<!-- saved from url=(0060)http://twitter.github.com/bootstrap/javascript.html#popovers -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <title>Constructing Robust Affinity Graphs for Spectral Clustering</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Xiatian Zhu">
+        <meta name="author" content="Xiatian Zhu">
+       	<meta name="keywords" content="朱霞天, Xiatian Zhu, 
+		Visual Surveillance, Video Summarisation, Video Summarization, Video Synopsis,
+		Camera Network, Multi-Camera Correlation, Feature Coding,
+		Multi-Source, Multisource, Heterogeneous Sources, Source Correlation,
+		Random Forest, Clustering Random Forest, Constrained Clustering Random Forest,
+		Constrained Spectral Clustering, Pairwise Constraint Propogation, Noisy Constraints, Imperfect Oracles,
+		Constraint Propagation Random Forest, COP-RF" />
+        
+        <!-- Le styles -->
+        <link href="../css/bootstrap.css" rel="stylesheet">
+        <link href="../css/bootstrap-responsive.css" rel="stylesheet">
+        <link href="../css/docs.css" rel="stylesheet">
+        <link href="../prettify.css" rel="stylesheet">
+        <link href="../css/cavan.css" rel="stylesheet">
+		<link href="../css/Eddy.css" rel="stylesheet">
+        
+        <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+        <!-- Le fav and touch icons -->
+        <link rel="shortcut icon" type="image/ico" href="http://www.eecs.qmul.ac.uk/~xz303/images/icon/fav.png" /> 
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-57-precomposed.png">
+        
+        <link href="http://vjs.zencdn.net/c/video-js.css" rel="stylesheet">
+        <script src="http://vjs.zencdn.net/c/video.js"></script>
+        
+    </head>
+    
+    
+    
+    <body data-spy="scroll" data-target="#navbar" data-twttr-rendered="true">
+        
+        <div id="navbar" class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!--<a class="brand" href="index.html#">C. C. LOY</a>-->
+                    <div class="nav-collapse">
+                        <ul class="nav">
+                            <li><a href="../index.html"><strong>Home</strong></a></li>
+                            <li><a href="../index.html#PUBLICATION"><strong>Publication</strong></a></li>
+                            <li><a href="../download.html"><strong>Download</strong></a></li>
+                        </ul>
+                    </div><!--/.nav-collapse -->
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        
+        <div class="container">
+            <div class="tooltip-demo">
+                
+                <section id="overview_diagram">
+                    <div class="page-header">
+                        <h1>Constructing Robust Affinity Graphs for Spectral Clustering <small>CVPR'14</small></h1>
+                    </div>
+                    
+
+                </section>
+                
+                <!-- Content
+        ================================================== -->
+                <section>
+                    
+                    <h2>Introduction <small></small></h2>
+                    <p>
+                        Spectral clustering requires robust and meaningful affinity graphs as input in order to form clusters with desired structures that can well support human intuition. To construct such affinity graphs is non-trivial due to the ambiguity and uncertainty inherent in the raw data. In contrast to most existing clustering methods that typically employ all available features to construct affinity matrices with the Euclidean distance, which is often not an accurate representation of the underlying data structures, we propose a novel unsupervised approach to generating more robust affinity graphs via identifying and exploiting discriminative features for improving spectral clustering. Specifically, our model is capable of capturing and combining subtle similarity information distributed over discriminative feature subspaces for more accurately revealing the latent data distribution and thereby leading to improved data clustering, especially with heterogeneous data sources. We demonstrate the efficacy of the proposed approach on challenging image and video datasets.
+                    </p>
+                    
+                </section>
+                
+                <section>
+                    <h2>Contribution Highlights <small></small></h2>
+					We formulate a unified and generalised data similarity inference framework based on the unsupervised clustering random forest with three innovations:
+                    <ol>
+                        <li>
+							Instead of considering the complete feature space as a whole, the proposed model is designed to avoid less informative features by measuring between-sample proximity via discriminative feature subspaces, yielding similarity graphs that better express the underlying semantic structure in data.
+						</li>
+                        <li>
+							We relax the Euclidean assumption for data similarity inference by following the information-theoretic definition of data similarity that different similarities can be induced from a given sample pair if distinct propositions are taken or different questions are asked about data commonalities.
+						</li>
+						<li>
+							The pairwise affinity matrix generated by the proposed model automatically possesses the local neighbourhood. Thus, no additional Gaussian kernel is needed to enforce locality.
+						</li>
+                    </ol>
+                    
+                </section>
+                
+                <section>
+                    <h2>Citation <small></small></h2>
+                    <ol>
+                        <li>
+							
+							Constructing Robust Affinity Graphs for Spectral Clustering.
+							<br/>
+							X. Zhu, C.C. Loy and S. Gong. 
+							<br/>
+							In Proc. IEEE Conference on Computer Vision and Pattern Recognition <b>(CVPR)</b>, 
+							Columbus, Ohio, USA, June 2014.&nbsp;
+							<br/>
+							<!-- paper download -->
+							[<a href='../papers/CVPR14/ZhuLoyGong_CVPR14.pdf'>PDF</a>] &nbsp;
+							[<a href='../papers/CVPR14/poster_CVPR14.pdf'>Poster</a>] &nbsp;
+						</li>
+                    </ol>
+                </section>
+                
+                <section>
+                    <h2>Images<small></small></h2>
+                    <!-- Put other representative images here -->
+                    <!-- Again, please put the images in to ./images -->
+                    <!--div class="row-fluid">
+						
+                        <div class="span4">
+                            <a href="./images/spectral_clustering.png" class="thumbnail" rel="tooltip" data-placement="top" title="Click for large image">
+                                <img src="./images/spectral_clustering.png"   alt="">
+                            </a>
+                        </div>
+						
+                        <div class="span8">
+                            <h3><strong>Problem definition:</strong></h3>
+                            <p>
+								How to construct <em>robust</em> and <em>meaningful</em> affinity matrices/graphs is crucial for data spectral clustering. 
+								This is because the given data are often challenging due to being high-dimensional, heterogeneous and noisy.
+		`					</p>
+                        </div>
+                    </div-->
+                    
+                    <p></p> <!-- this is to separate different rows of figures -->
+			
+                    <div class="row-fluid">						
+                        <div class="span4">
+                            <a href="./images/overview.png" class="thumbnail" rel="tooltip" data-placement="top" title="Click for large image">
+                                <img src="./images/overview.png"   alt="">
+                            </a>
+                        </div>
+					
+                        <div class="span8">  
+							<h3><strong>Overview of our approach: </strong></h3>						
+                            <p>
+								The proposed affinity graph construction approach is built upon clustering random forests, with a few important merits:
+								<ol>
+									<li>
+										Our model is purely unsupervised without requiring
+										any ground truth annotations, since it is based on clustering
+										forests rather the more popular supervised classification
+										or regression random forests
+									</li>
+									
+									<li>
+										By virtue of the random subspace feature selection
+										during training forests, the pairwise affinity matrix
+										generated by our model is less susceptible to corruption
+										of noisy and irrelevant features.
+									</li>
+									
+									<li>
+										Each decision tree in the forest hierarchically encodes
+										an exhaustive set of comparative tests or split
+										functions, which implicitly define different notions of
+										between-sample similarities. Our model is capable of
+										extracting and combining these subtle similarities at
+										distributed discriminative subspaces for learning robust
+										pairwise affinity matrices.
+									</li>
+								</ol>
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <p></p> <!-- this is to separate different rows of figures -->
+			
+                    <div class="row-fluid">
+                        <div class="span4">
+                            <a href="./images/datasets.png" class="thumbnail" rel="tooltip" data-placement="top" title="Click for large image">
+                                <img src="./images/datasets.png"   alt="">
+                            </a>
+                        </div>
+						
+                        <div class="span8">    
+				<h3><strong>Datasets: </strong></h3>
+				<p>
+					Example images of three visual datasets, including both images and videos.
+				</p>
+                        </div>
+                    </div>
+                    
+                    <p></p> <!-- this is to separate different rows of figures -->
+			
+                    <div class="row-fluid">
+						
+                        <div class="span4">
+                            <a href="./images/ARI_scores.png" class="thumbnail" rel="tooltip" data-placement="top" title="Click for large image">
+                                <img src="./images/ARI_scores.png"   alt="">
+                            </a>
+                        </div>
+					
+                        <div class="span8"> 
+				<h3><strong>Evaluation:</strong></h3>
+				<p>Comparison of clustering performance between different methods with varying neighbourhood sizes using Adjusted Rand Index (ARI).</p>
+                        </div>
+                    </div>
+                    
+                </section>
+                
+                <section>
+					<h2>Datasets and Codes <small></small></h2>
+                    <div class="row">
+                        <div class="span4">
+                            <a href="http://www.eecs.qmul.ac.uk/~xz303/downloads_qmul_ERCe_dataset.html" class="thumbnail" rel="tooltip" data-placement="top" data-original-title="Dataset details ...">
+                                <img src="../images/datasets/ERCe.png" width="360" alt=""> 
+                            </a>
+                        </div>
+                        <div class="span8">
+                            <strong>Educational Resource Centre (ERCe) Dataset</strong>
+                            <p>
+                                An indoor dataset collected from a university campus for physical event understanding of long video streams.
+                            </p>
+                            <a href="http://www.eecs.qmul.ac.uk/~xz303/downloads_qmul_ERCe_dataset.html">Details ... </a> 
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="span4">
+                            
+                        </div>
+                        <div class="span8">
+				<strong>C++/MATLAB code for unsupervised clustering random forest</strong>
+				<p>
+				C++ codes with MATLAB wrapper for unsupervised clustering forest. 
+				It can construct robust affinity graph for spectral clustering or manifold ranking. 
+				Apart from the proposed approach, the code also includes binary affinity described in 
+				A. Criminisi and J. Shotton, Decision Forests for Computer Vision and  Medical Image Analysis, Springer 2013. 
+				A demo is included.
+				</p>
+				<p>
+					<a href="./code/robustGraphs.zip" class="btn btn-success"><i class="icon-download-alt icon-white"></i> Download Codes [464 KB]</a>
+				</p>
+                        </div>
+                    </div>
+                    
+                </section>
+				
+				<section>			
+                    <h2>Related Projects <small></small></h2>
+                    
+                    <ul>
+			<li><a href="../project_video_synopsis/index.html">Video Synopsis by Heterogeneous Multi-Source Correlation</a></li>
+                        <li><a href="../project_constrained_clustering/index.html">Constrained Clustering: Effective Constraint Propagation with Imperfect Oracles</a></li>
+                    </ul>
+                </section>
+                
+                
+                
+                
+                <!-- Footer ================================================== -->
+                <footer class="footer">
+                    <div class="container">
+                        <p class="pull-right">Page created using <a href="http://getbootstrap.com/" target="_blank">bootstrap</a></p>
+                    </div>
+                </footer>
+                
+            </div> <!-- /tooltip-demo -->
+        </div> <!-- /container -->
+
+
+        
+        <!-- Le javascript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/javascript" src="../js/widgets.js"></script>
+        <script src="../js/jquery.js"></script>
+        <script src="../js/prettify.js"></script>
+        <script src="../js/bootstrap-transition.js"></script>
+        <script src="../js/bootstrap-alert.js"></script>
+        <script src="../js/bootstrap-modal.js"></script>
+        <!--<script src="./js/bootstrap-dropdown.js"></script>-->
+        <!--<script src="./js/bootstrap-scrollspy.js"></script>-->
+        <script src="../js/bootstrap-tab.js"></script>
+        <script src="../js/bootstrap-tooltip.js"></script>
+        <!--<script src="./js/bootstrap-popover.js"></script>-->
+        <script src="../js/bootstrap-button.js"></script>
+        <script src="../js/bootstrap-collapse.js"></script>
+        <!--<script src="./js/bootstrap-carousel.js"></script>-->
+        <!--<script src="./js/bootstrap-typeahead.js"></script>-->
+        <script src="../js/bootstrap-affix.js"></script>
+        <script src="../js/application.js"></script>
+        
+        
+        
+        
+        
+        
+</body></html>
