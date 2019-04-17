@@ -1,0 +1,136 @@
+.label_download {
+  padding: 1px 4px 2px;
+  font-size: 10.998px;
+  font-weight: bold;
+  line-height: 13px;
+  color: #ffffff;
+  vertical-align: top;
+  white-space: nowrap;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #999999;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.label_flag {
+   color: green;
+}
+
+/* Footer
+-------------------------------------------------- */
+
+.footer {
+  padding: 30px 0;
+  margin-top: 50px;
+  border-top: 1px solid #e5e5e5;
+  background-color: #fff;
+}
+.footer p {
+  margin-bottom: 0;
+  color: #777;
+}
+.footer-links {
+  margin: 10px 0;
+}
+.footer-links li {
+  display: inline;
+  padding: 0 2px;
+}
+.footer-links li:first-child {
+  padding-left: 0;
+}
+
+.title {
+*/ font-weight: bold; */
+font-style: italic;
+/* text-decoration: underline; */
+}
+
+h1, h2, h3, h4, h5, h6 {
+margin: 0;
+font-family: inherit;
+font-weight: bold;
+color: inherit;
+text-rendering: optimizelegibility;
+}
+
+h1 {
+font-size: 30px;
+line-height: 36px;
+}
+
+h1 small {
+font-size: 18px;
+}
+
+h2 {
+font-size: 24px;
+line-height: 36px;
+}
+
+h3 {
+font-size: 18px;
+line-height: 27px;
+}
+
+.research_table tr{
+height:50px;
+}
+.research_table td{
+width:50px;
+}
+
+/* Article
+-------------------------------------------------- */
+
+			section .highlight {
+			padding-top: 0px;
+			}
+            section > article {
+            margin:0 0 30px;
+            padding:0 0 10px;
+            border-bottom:1px solid #BBB;
+            -webkit-column-count:3;
+            -moz-column-count:3;
+            column-count:3;
+            -webkit-column-gap:30px;
+            -moz-column-gap:30px;
+            column-gap:30px;
+            -webkit-column-rule:1px solid #BBB;
+            -moz-column-rule:1px solid #BBB;
+            column-rule:1px solid #BBB;
+            }
+            section > article:last-of-type {
+            margin:0;
+            }
+            section > article h2 {
+            margin:0 0 15px;
+            padding:0 0 15px;
+            border-bottom:3px double #BBB;
+            font:bold 20px/1 'PT Sans Narrow', sans-serif;
+            }
+            section > article P {
+            margin:0 0 15px;
+            }
+            section > article P:first-letter {
+            float:left;
+            margin-right:5px;
+            font:bold 20px/1 'PT Sans Narrow', sans-serif;
+            }
+            section > article IMG {
+            display:block;
+            margin:0 0 15px;
+            width:100%;
+            }
+            section > article article {
+            margin:30px 0 0;
+            padding:15px 0 0;
+            border-top:3px double #BBB;
+            column-count:auto;
+            column-span:all;
+            }
+            section > article article h3 {
+            margin:0 0 15px;
+            font:bold 20px/1 'PT Sans Narrow', sans-serif;
+            }
