@@ -1,0 +1,16 @@
+iLIDS-VID tar Download times 
+
+2019: 171 (30 Jan)
+
+2018: 1,956
+
+2017: 2,973
+
+2016: 1,237
+
+2015: 1,540
+
+
+
+Web stats:
+https://systems.eecs.qmul.ac.uk/awstats/awstats.pl?config=www.eecs.qmul.ac.uk

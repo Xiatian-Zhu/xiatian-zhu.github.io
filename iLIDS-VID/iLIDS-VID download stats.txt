@@ -1,0 +1,30 @@
+Download numbers of iLIDS-VID over years
+
+Link: https://www.eecs.qmul.ac.uk/awstats/awstats.pl?month=all&year=2017&output=urldetail&config=www.eecs.qmul.ac.uk
+
+Search key word: iLIDS-VID/iLIDS-VID.tar
+
+
+2014
+>> 292+29 = 321
+
+2015
+>> 2852+836 = 3688
+
+2016
+>> 1281+146+40+1+1 = 1469
+
+2017
+>> 103
+
+
+
+TOTAL:
+>> 321+3688+1469+103 = 5581
+
+
+
+
+
+
+Last update: 14 Feb 2017
