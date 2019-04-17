@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<!-- saved from url=(0060)http://twitter.github.com/bootstrap/javascript.html#popovers -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <title>Learning from Multiple Sources for Video Summarisation</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Xiatian Zhu">
+        <meta name="author" content="Xiatian Zhu">
+        
+		<meta name="keywords" content="朱霞天, Xiatian Zhu, 
+			Visual Surveillance, Video Summarisation, Video Summarization, Video Synopsis,
+			Camera Network, Multi-Camera Correlation, Feature Coding,
+			Multi-Source, Multisource, Heterogeneous Sources, Source Correlation,
+			Random Forest, Clustering Random Forest, Constrained Clustering Random Forest,
+			Constrained Spectral Clustering, Pairwise Constraint Propogation, Noisy Constraints, Imperfect Oracles,
+			Constraint Propagation Random Forest, COP-RF" />
+        
+        <!-- Le styles -->
+        <link href="../css/bootstrap.css" rel="stylesheet">
+		<link href="../css/bootstrap-responsive.css" rel="stylesheet">
+		<link href="../prettify.css" rel="stylesheet">
+		<link href="../css/docs.css" rel="stylesheet">
+		<link href="../css/Eddy.css" rel="stylesheet">
+        <link href="../css/cavan.css" rel="stylesheet">
+        
+        <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+        <!-- Le fav and touch icons -->
+        <link rel="shortcut icon" type="image/ico" href="http://www.eecs.qmul.ac.uk/~xz303/images/icon/fav.png" /> 
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-57-precomposed.png">
+        
+        <link href="http://vjs.zencdn.net/c/video-js.css" rel="stylesheet">
+        <script src="http://vjs.zencdn.net/c/video.js"></script>
+             
+    </head>
+    
+    
+    
+    <body data-spy="scroll" data-target="#navbar" data-twttr-rendered="true">
+        
+        <div id="navbar" class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <div class="nav-collapse">
+                        <ul class="nav">
+                            <li><a href="../index.html"><strong>Home</strong></a></li>
+							<li><a href="../index.html#PUBLICATION"><strong>Publication</strong></a></li>
+                            <li><a href="../download.html"><strong>Download</strong></a></li>
+                        </ul>
+                    </div><!--/.nav-collapse -->
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        
+        <div class="container">
+            <div class="tooltip-demo">
+                
+                <section id="overview_diagram">
+                    <div class="page-header">
+                        <h1>Learning from Multiple Sources for Video Summarisation <small>IJCV'15, ICCV'13</small></h1>
+                    </div>
+                    
+                    <!-- <div class="row-fluid">
+            <div class="thumbnail">
+                <img src="./images/overview.png" alt="">
+            </div>
+          </div> -->
+                </section>
+                
+                <!-- Content
+        ================================================== -->
+                <section>
+                    
+                    <h2>Introduction <small></small></h2>
+                    <p>
+                        Generating coherent synopsis for surveillance video stream remains a formidable challenge due to the ambiguity and uncertainty inherent to visual observations. In contrast to existing video synopsis approaches that rely on visual cues alone, we propose a novel multi-source synopsis framework capable of correlating visual data and independent non-visual auxiliary information to better describe and summarise subtle physical events in complex scenes. Specifically, our unsupervised framework is capable of seamlessly uncovering latent correlations among heterogeneous types of data sources, despite the non-trivial heteroscedasticity and dimensionality discrepancy problems. Additionally, the proposed model is robust to partial or missing non-visual information. We demonstrate the effectiveness of our framework on two crowded public surveillance datasets.
+                    </p>
+                    
+                </section>
+                
+                <section>
+                    <h2>Contribution Highlights <small></small></h2>
+                    <ul>
+                        <li>We show that coherent and meaningful multi-source based video synopsis can be constructed in an unsupervised manner by learning collectively from heterogeneous visual and non-visual sources. This is made possible by formulating a novel Constrained-Clustering Forest (CC-Forest) with a reformulated information gain function that seamlessly handles multi-heterogeneous data sources dissimilar in representation, distribution, and dimension.</li>
+                        <li>The proposed approach is novel in its ability to accommodate partial or completely missing non-visual sources.</li>
+                        <li>We demonstrate the usefulness of our framework through generating video synopsis enriched by plausible semantic explanation, providing structured event-based summarisation beyond object detection counts or key-frame feature statistics.</li>
+                    </ul>
+                    
+                </section>
+                
+                <section>
+                    <h2>Citation <small></small></h2>
+                    <ol>
+			<li>
+				<span class="title">Learning from Multiple Sources for Video Summarisation</span> 
+				<br />
+				<span class="details">
+					X. Zhu, C. C. Loy, S. Gong <br /> 
+					International Journal of Computer Vision, in print, 2015 <strong>(IJCV)</strong><br />
+				</span>
+				<!-- paper download -->
+				[<a href='../papers/ZhuLoyGong_IJCV2015.pdf'>Preprint</a>] &nbsp;
+				<!-- [<a href='http://arxiv.org/abs/1501.03069'>arXiv version</a>] &nbsp; -->
+			</li>
+                        <li>
+				<span class="title">Video Synopsis by Heterogeneous Multi-Source Correlation</span> 
+				<br />
+				<span class="details">
+					X. Zhu, C. C. Loy, S. Gong <br /> 
+					in Proceedings of IEEE International Conference on Computer Vision, 2013 <strong>(ICCV)</strong><br />
+				</span>
+				<!-- <a href="./papers/ICCV2013/Video_Synopsis_ICCV_2013.pdf"><span class="label_download">PDF</span></a> -->
+				[<a href='../papers/ICCV2013/ZhuLoyGong_ICCV2013.pdf'>PDF</a>] &nbsp;		
+				[<a href='../papers/ICCV2013/Poster_ICCV_2013.pdf'>Poster</a>] &nbsp;
+				<!-- [<a href='../papers/bib/ZhuLoyGong_ICCV2013.bib'>Bib</a>] &nbsp -->
+			</li>
+                    </ol>
+                </section>
+                
+                <section>
+                    <h2>Images<small></small></h2>
+                    <!-- Put other representative images here -->
+                    <!-- Again, please put the images in to ./images -->
+                    <div class="row-fluid">
+                        <div class="span4">
+                            <a href="./images/fig1.png" class="thumbnail" rel="tooltip" data-placement="top" title="Click for large image">
+                                <img src="./images/fig1.png" alt="">
+                            </a>
+                        </div>
+                        <div class="span8">
+                            <strong>Overview:</strong>
+                            <p>The proposed CC-Forest discovers latent correlations among heterogeneous visual and non-visual data sources, which can be both inaccurate and incomplete, for video synopsis of crowded public scenes.</p>
+                        </div>
+                    </div>
+                    
+                    <p></p> <!-- this is to separate different rows of figures -->
+			
+                    <div class="row-fluid">
+                        <div class="span4">
+                            <a href="./images/fig2.png" class="thumbnail" rel="tooltip" data-placement="top" title="Click for large image">
+                                <img src="./images/fig2.png" alt="">
+                            </a>
+                        </div>
+                        <div class="span8">
+                            <strong>Learning correlation via information gain: </strong>
+                            <p>
+                               Training steps for learning a multi-source synopsis model.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <p></p> <!-- this is to separate different rows of figures -->
+			
+                    <div class="row-fluid">
+                        <div class="span4">
+                            <a href="./images/fig3.png" class="thumbnail" rel="tooltip" data-placement="top" title="Click for large image">
+                                <img src="./images/fig3.png" alt="">
+                            </a>
+                        </div>
+                        <div class="span8">
+                            <strong>Structure-driven non-visual tag inference:</strong>
+                            <p>Structure-driven non-visual tag inference: (a) Channel an unseen clip x* into individual trees; (b) Estimate the nearest clusters of x* within the leaves it falls into: hollow circles denote clusters; (c) Compute the tag distributions by averaging tree-level predictions.</p>
+                        </div>
+                    </div>
+                    
+                    <p></p> <!-- this is to separate different rows of figures -->
+			
+                    <div class="row-fluid">
+                        <div class="span4">
+                            <a href="./images/fig4.png" class="thumbnail" rel="tooltip" data-placement="top" title="Click for large image">
+                                <img src="./images/fig4-TISI.png" alt="">
+								<img src="./images/fig4-ERCe.png" alt="">
+                            </a>
+                        </div>
+                        <div class="span8">
+                            <strong>Example views of the (a) TISI and (b) ERCe datasets:</strong>
+                            <p>We conducted experiments on two datasets collected from publicly accessible webcams that feature an outdoor and an indoor scene respectively: (1) the TImes Square Intersection (TISI) dataset, and (2) the Educational Resource Centre (ERCe) dataset. There are a total of 7324 video clips spanning over 14 days in the TISI dataset, whilst a total of 13817 clips were collected across a period of two months in the ERCe dataset. Each clip has a duration of 20 seconds.</p>
+                        </div>
+                    </div>
+                    
+                    <p></p> <!-- this is to separate different rows of figures -->
+                    
+                    <div class="row-fluid">
+                        <div class="span4">
+                            <a href="./images/fig5.png" class="thumbnail" rel="tooltip" data-placement="top" title="Click for large image">
+                                <img src="./images/fig5.png" alt="">
+                            </a>
+                        </div>
+                        <div class="span8">
+                            <strong>Multi-source latent cluster discovery:</strong>
+                            <p>Qualitative comparison on cluster quality between different methods on the TISI dataset. A key frame of each video clip is shown. (X/Y) in the brackets - X refers to the number of clips with sunny weather as shown in the images in the first two columns. Y is the total number of clips in a cluster. The frames inside the red boxes refer to those inconsistent clips in a cluster.</p>
+                        </div>
+                    </div>
+                    
+                    <p></p> <!-- this is to separate different rows of figures -->
+                    
+                    <div class="row-fluid">
+                        <div class="span4">
+                            <a href="./images/fig6-synopsis-TISI.png" class="thumbnail" rel="tooltip" data-placement="top" title="Click for large image">
+                                <img src="./images/fig6-synopsis-TISI.png" alt="">
+                            </a>
+                        </div>
+                        <div class="span8">
+                            <strong>Synopsis example I (TISI):</strong>
+                            <p>A synopsis with a multi-scale overview of weather+traffic changes over multiple days. Black bold prints = failure predictions.</p>
+                        </div>
+                    </div>
+                    
+                    <p></p> <!-- this is to separate different rows of figures -->
+                    
+                    <div class="row-fluid">
+                        <div class="span4">
+                            <a href="./images/fig7.png" class="thumbnail" rel="tooltip" data-placement="top" title="Click for large image">
+                                <img src="./images/fig7.png" alt="">
+                            </a>
+                        </div>
+                        <div class="span8">
+                            <strong>Synopsis example II (ERCe):</strong>
+                            <p>Summarisation of some key events taking place during the first two months of a new semester on a university campus. The top-left corner numbers in each window are month-date whilst the bottom-right numbers are the hours on a day.</p>
+                        </div>
+                    </div>
+                    
+                </section>
+                
+                <section>			
+                    <h2>Datasets<small></small></h2>
+                    
+                    <ul>
+                        <li>
+							<a href="http://www.eecs.qmul.ac.uk/~xz303/downloads_qmul_TISI_dataset.html">TISI dataset</a>
+                        </li>
+						<li>
+							<a href="http://www.eecs.qmul.ac.uk/~xz303/downloads_qmul_ERCe_dataset.html">ERCe dataset</a>
+                        </li>
+                    </ul>
+                </section>
+                
+                
+                
+                <!-- Footer ================================================== -->
+                <footer class="footer">
+                    <div class="container">
+                        <p class="pull-right">Page created using <a href="http://getbootstrap.com/" target="_blank">bootstrap</a></p>
+                    </div>
+                </footer>
+                
+            </div> <!-- /tooltip-demo -->
+        </div> <!-- /container -->
+
+
+        
+        <!-- Le javascript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster 
+        <script type="text/javascript" src="../js/widgets.js"></script>
+        
+        <script src="../js/prettify.js"></script>-->
+
+	<script src="../js/jquery.js"></script>
+        <script src="../js/bootstrap-transition.js"></script>
+        <script src="../js/bootstrap-alert.js"></script>
+        <script src="../js/bootstrap-modal.js"></script>
+        <!--<script src="./js/bootstrap-dropdown.js"></script>-->
+        <!--<script src="./js/bootstrap-scrollspy.js"></script>-->
+        <script src="../js/bootstrap-tab.js"></script>
+        <script src="../js/bootstrap-tooltip.js"></script>
+        <!--<script src="./js/bootstrap-popover.js"></script>-->
+        <script src="../js/bootstrap-button.js"></script>
+        <script src="../js/bootstrap-collapse.js"></script>
+        <!--<script src="./js/bootstrap-carousel.js"></script>-->
+        <!--<script src="./js/bootstrap-typeahead.js"></script>
+        <script src="../../js/bootstrap-affix.js"></script>
+        <script src="../../js/application.js"></script>-->
+        
+        
+        
+        
+        
+        
+</body></html>
